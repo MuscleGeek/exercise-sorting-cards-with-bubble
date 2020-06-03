@@ -1,4 +1,4 @@
-# ![alt text](https://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=breathecode,32) Sorting Cards with Bubble algorithm
+# Sorting Cards with Bubble algorithm
 
 Sorting is considered to be an important concept in many programming languages as it helps us locate elements in a faster and easier manner.
 

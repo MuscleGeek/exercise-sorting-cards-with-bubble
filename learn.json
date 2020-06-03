@@ -4,8 +4,11 @@
 	"status": "published",
 	"translations": ["es", "us"],
 	"solution": "https://jsfiddle.net/BreatheCode/x53kugn2/116/",
-	"preview": "",
-	"duration" : 4,
+	"preview": "https://github.com/breatheco-de/exercise-sorting-cards-with-bubble/blob/master/thumb.png?raw=true",
+	"duration" : 8,
+	"difficulty": "intermediate",
+	"technologies": ["sorting-algorithms", "html/css", "javascript"],
+	"syntax": ["vanilla.js"],
 	"description" : "Practice building algorithms by doing a bubble-sorting algorithm and displaying it on a website",
 	"talents": [
 		{ "badge": "identator", "points": 6 },

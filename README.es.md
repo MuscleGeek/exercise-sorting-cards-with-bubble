@@ -1,4 +1,4 @@
-# ![alt text](https://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=breathecode,32) Sorting Cards with Bubble algorithm
+# Sorting Cards with Bubble algorithm
 
 La clasificación se considera un concepto importante en muchos lenguajes de programación, ya que nos ayuda a ubicar elementos de una manera más rápida y sencilla.
 
