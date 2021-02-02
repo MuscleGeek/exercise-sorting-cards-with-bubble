@@ -1,0 +1,39 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#txtBox{
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 3px 2px 1px #5c5858;
+    color: #0c0c0c;
+    padding: 10px;      
+}
+#btnDraw{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    border: 2px;
+    border-radius: 6px;
+    background-color:rgb(231, 4, 4);
+    color:whitesmoke; 
+    text-transform: uppercase;
+}  
+   
+#btnSort{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    border: 2px;
+    border-radius: 6px;
+    background-color:rgb(231, 4, 4);
+    color:whitesmoke; 
+    text-transform: uppercase;
+}
+#btnClean{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    border: 2px;
+    border-radius: 6px;
+    background-color:rgb(231, 4, 4);
+    color:whitesmoke; 
+    text-transform: uppercase;
+}
