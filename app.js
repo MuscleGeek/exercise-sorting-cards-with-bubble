@@ -31,7 +31,7 @@ const drawCard = (num, sym, col) => {         //array que contendrá el numero, 
         card.innerHTML = `
         <p id="sharpTop" class="text-left mr-1 mt-2${col}">${sym}<p/>
         <h1 id="numBody"class=text-center>${ace}<h1>
-        <p id="sharpBottom" class="text-left mr-1 mt2${col}">${sym}</p>
+        <p id="sharpBottom" class="text-right mr-1 mt2${col}">${sym}</p>
         `;
     }   
         return card;
@@ -71,7 +71,7 @@ const sortCards = () => {    /* Funcionalidad para el botón SORT*/
     let myoCardArray = myCards.slice(); //seteamos nuestro nuestro nuevo arreglo con una nueva copia con el array que contiene las cartas generadas anteriormente por el usuario
     bubbleSort(myoCardArray); //ejecutamos el ordenamiento de burbuja para la copia del arreglo basado en la comparacion y cambio de posiciones.   
     console.log(myCards);       //mostramos el arreglo que contiene los numeros cartas del DRAW
-    console.log(oCards);        //mostramos el areglo ordenado de los numeros cartas 
+    console.log(myoCardArray);        //mostramos el areglo ordenado de los numeros cartas 
 }
 
 const bubbleSort = (arr) => {
