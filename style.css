@@ -1,6 +1,6 @@
 body{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    background: green;
+    
     
 }
                 /*SPAN*/
@@ -49,10 +49,10 @@ body{
     border-radius: 10px;
     box-shadow:5px 5px rgba(0,0,0,0.30), 9px 9px rgba(0,0,0,0.22);
 }
-.redColorCard {
+.redColor {
     color: red;
 }
 
-.blackColorCard {
+.blackColor {
     color: black;
 }
