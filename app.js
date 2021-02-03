@@ -15,7 +15,7 @@ const drawCard = (num, sym, col) => {         //array que contendrá el numero, 
     } else if (num == 12) {      //en caso de ser 12 se entendera como Queen "Q"
         let q = "Q";
         card.innerHTML = `
-        <p id="SharpTop" class="text-left mr-1 mt-2 ${col}">${sym}</p>
+        <p id="sharpTop" class="text-left mr-1 mt-2 ${col}">${sym}</p>
         <h1 id="numBody" class="text-center">${q}</h1>
         <p id="sharpBottom" class="text-right mr-1 mb-2 ${col}">${sym}</p>
 `;
@@ -33,11 +33,18 @@ const drawCard = (num, sym, col) => {         //array que contendrá el numero, 
         <h1 id="numBody"class=text-center>${ace}<h1>
         <p id="sharpBottom" class="text-right mr-1 mt2${col}">${sym}</p>
         `;
-    }   
+    } else{
+        card.innerHTML = `
+        <p id="sharpTop" class="text-left" mr-1 mt-2${col}>${sym}</p>
+        <h1 id="numBody" class="text-center">${num}</h1>
+        <p id="sharpBottom" class="text-right" mr-1 mb-2${col}>${sym}</p>
+        `;
+
+    }
         return card;
 }
 
-function inputCardNumber()     /*Funcion correspondiente al ingresar el numero de cards (DRAW)*/
+function drawCards()     /*Funcion correspondiente al ingresar el numero de cards (DRAW)*/
 {
     let cardInput = document.getElementById("inputText").value;    //obtenemos input de texto para el numero de cartas para empezar la condicion
     if(cardInput == "")
@@ -45,7 +52,7 @@ function inputCardNumber()     /*Funcion correspondiente al ingresar el numero d
         alert("Por favor ingresa un numero");   //alerta en caso de vacio
     }
     else{
-        for( let i = 1; i <= cardInput; i++);   //en el caso que el 1 sea menor que el numero de cartas ingresado
+        for( let c = 1; c <= cardInput; c++);   //en el caso que el 1 sea menor que el numero de cartas ingresado
         let cardNum = [2,3,4,5,6,7,8,9,10,11,12,13,1];  //arreglo con el numero de las cartas
         let cardSharp = ["♠", "♣", "♥", "♦"]; // arreglo de palos
         let randCard = Math.floor(Math.random() * cardNum.length);  // Contiene el random de los numeros de las cartas.
@@ -59,7 +66,7 @@ function inputCardNumber()     /*Funcion correspondiente al ingresar el numero d
         }
         let cardDrawDiv = document.querySelector(".divDraw");                  //Obtenemos el elemento de la carta de tipo de ID creado al principio
         cardDrawDiv.appendChild(drawCard(cardNum[randCard], cardSharp[randSharp], classColor));   //Adjuntamos los el draw de cartas del select ".cards" y adjuntamos las cartas generadas
-        myCards.push({"cNumber":cardNum[cardNum],"cSharp":cardSharp[randSharp],"cColor":classColor});      //incrustamos las cartas generadas por medio del metodo push
+        myCards.push({"cNumber":cardNum[randNum],"cSharp":cardSharp[randSharp],"cColor":classColor});      //incrustamos las cartas generadas por medio del metodo push
     }
 
 }       //END Funcion asignada al input DRAW /
@@ -82,14 +89,14 @@ const bubbleSort = (arr) => {
             let index = 0;
             while(index < wall) //mientras index sea menor a la ultima posicion  
             {
-                if(arr[index].cNumber > arr[index + 1].cNumber)
+                if(arr[index].cNumber > arr[index + 1].cNumber) //cambio de posición
                 {
                     let aux = arr[index];
                     arr[index + 1] = aux;
                     for(let z=0; z < arr.length; z++)
                     {
                         console.log(arr[j]);
-                        let cardSortDiv = document.querySelector(".divSort");
+                        let cardSortDiv = document.querySelector(".divSort"); //Se obtiene el ID divSort)/
                         cardSortDiv.appendChild(drawCard(arr[z].cNumber, arr[z].cSharp, arr[j].cColor)); //incrustamos nuestro algoritmo el div de card-sort on el ordenamiento correspondiente
                         if(z == arr.length -1) { //si z y el array tiene la misma longitud
                             let brLine = document.createElement("br"); //creamos salto de linea

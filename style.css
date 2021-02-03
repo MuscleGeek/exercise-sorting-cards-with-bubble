@@ -1,9 +1,9 @@
 body{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    background-color: green;
+    background: green;
     
 }
-
+                /*SPAN*/
 #btnSpan{
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
@@ -11,7 +11,7 @@ body{
     color: #0c0c0c;
     padding: 10px;      
 }
-#btnDraw{           /*SPAN*/
+#btnDraw{           /*DRAW BTN*/
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     background-color:rgb(231, 4, 4);
@@ -20,7 +20,7 @@ body{
     text-transform: uppercase;
     border-radius: 6px;    
 }  
-   
+                /*SORT BTN*/
 #btnSort{
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -30,6 +30,7 @@ body{
     color:whitesmoke; 
     text-transform: uppercase;
 }
+            /*CLEAN BTN*/
 #btnClean{
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
