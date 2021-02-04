@@ -29,9 +29,9 @@ const drawCard = (num, sym, col) => {         //array que contendrá el numero, 
     } else if (num == 1) {
         let ace = "A";           //en caso de ser 1 se entenderá como As "A"
         card.innerHTML = `
-        <p id="sharpTop" class="text-left mr-1 mt-2 ${col}">${sym}<p/>
-        <h1 id="numBody"class="text-center">${ace}<h1>
-        <p id="sharpBottom" class="text-right mr-1 mt2 ${col}">${sym}</p>
+        <p id="sharpTop" class="text-left mr-1 mt-2 ${col}">${sym}</p>
+        <h1 id="numBody"class="text-center">${ace}</h1>
+        <p id="sharpBottom" class="text-right mr-1 mb-2 ${col}">${sym}</p>
         `;
     } else {
         card.innerHTML = `
@@ -48,7 +48,7 @@ function inputCards()     /*Funcion correspondiente al ingresar el numero de car
     if (cardInput == "") {
         alert("Por favor ingresa un numero");   //alerta en caso de vacio
     } else {
-        for (let c = 1; c <= cardInput; c++);
+        for (let c = 1; c <= cardInput; c++)
         { //en el caso que el 1 sea menor que el numero de cartas ingresado
             let cardNum = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1];  //arreglo con el numero de las cartas
             let cardSharp = ["♠", "♣", "♥", "♦"]; // arreglo de palos
@@ -59,7 +59,7 @@ function inputCards()     /*Funcion correspondiente al ingresar el numero de car
             } else {
                 classColor = "blackColor";        //condicion de asignacion de los colores. Negro a las posiciones [0][1] Bastos-Treboles
             }
-            let divDraw = document.querySelector(".divDraw");                  //Obtenemos el elemento de la carta de tipo de ID creado al principio
+            let divDraw = document.querySelector(".kardDrawBox");                 //Obtenemos el div en donde se mostaran el numero de cartas aleatoria escogidas por el usuario
             divDraw.appendChild(drawCard(cardNum[randNum], cardSharp[randSharp], classColor));   //Adjuntamos los el draw de cartas del select ".cards" y adjuntamos las cartas generadas
             myCards.push({ "cNumber": cardNum[randNum], "cSharp": cardSharp[randSharp], "cColor": classColor });      //incrustamos las cartas generadas por medio del metodo push
             /*console.log(myCards); /*probando--- condicion ---*/
@@ -91,11 +91,11 @@ const bubbleSort = (arr) => {
                 arr[index + 1] = aux;
                 for (let z = 0; z < arr.length; z++) {
                     console.log(arr[z]);
-                    let divSort = document.querySelector(".divSort"); //Se obtiene el ID divSort)/
+                    let divSort = document.querySelector(".kardSortBox"); //Se obtiene el ID containerSort)/
                     divSort.appendChild(drawCard(arr[z].cNumber, arr[z].cSharp, arr[z].cColor)); //incrustamos nuestro algoritmo el div de card-sort on el ordenamiento correspondiente
                     if (z == arr.length - 1) { //si z last[]//
                         let brLine = document.createElement("br"); //creamos salto de linea
-                        divSort.appendChild(br);
+                        divSort.appendChild(brLine);
                     }
                 }
             }
