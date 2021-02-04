@@ -43,7 +43,7 @@ const drawCard = (num, sym, col) => {         //array que contendrá el numero, 
     return card;
 }
 
-function inputCards()     /*Funcion correspondiente al ingresar el numero de cards (DRAW)*/ {
+function inputCards(){       /*Funcion correspondiente al ingresar el numero de cards (DRAW)*/ 
     let cardInput = document.getElementById("inputText").value;    //obtenemos input de texto para el numero de cartas para empezar la condicion
     if (cardInput == "") {
         alert("Por favor ingresa un numero");   //alerta en caso de vacio
@@ -59,10 +59,10 @@ function inputCards()     /*Funcion correspondiente al ingresar el numero de car
             } else {
                 classColor = "blackColor";        //condicion de asignacion de los colores. Negro a las posiciones [0][1] Bastos-Treboles
             }
-            let divDraw = document.querySelector(".kardDrawBox");                 //Obtenemos el div en donde se mostaran el numero de cartas aleatoria escogidas por el usuario
+            let divDraw = document.querySelector(".divDraw");                 //Obtenemos el div en donde se mostaran el numero de cartas aleatoria escogidas por el usuario
             divDraw.appendChild(drawCard(cardNum[randNum], cardSharp[randSharp], classColor));   //Adjuntamos los el draw de cartas del select ".cards" y adjuntamos las cartas generadas
             myCards.push({ "cNumber": cardNum[randNum], "cSharp": cardSharp[randSharp], "cColor": classColor });      //incrustamos las cartas generadas por medio del metodo push
-            /*console.log(myCards); /*probando--- condicion ---*/
+            
         }
     }
 }       //END Funcion asignada al input DRAW /
@@ -91,7 +91,7 @@ const bubbleSort = (arr) => {
                 arr[index + 1] = aux;
                 for (let z = 0; z < arr.length; z++) {
                     console.log(arr[z]);
-                    let divSort = document.querySelector(".kardSortBox"); //Se obtiene el ID containerSort)/
+                    let divSort = document.querySelector(".divSort"); //Se obtiene el ID containerSort)/
                     divSort.appendChild(drawCard(arr[z].cNumber, arr[z].cSharp, arr[z].cColor)); //incrustamos nuestro algoritmo el div de card-sort on el ordenamiento correspondiente
                     if (z == arr.length - 1) { //si z last[]//
                         let brLine = document.createElement("br"); //creamos salto de linea
