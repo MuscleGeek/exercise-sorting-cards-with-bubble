@@ -1,8 +1,8 @@
 let myCards = [];
 
 const drawCard = (num, sym, col) => {         //array que contendrá el numero, palo, color de la carta
-    let card = document.createElement("div");   //creamos un div para hacer la carta
-    card.classList.add("card");                 //asignamos una clase tipo carta
+    let card = document.createElement("div");   //creamos un div para hacer la carta        /*DISPLAY ISSUE FOUND HERE */ /*IT GETS DISPLAY FLEX*/ WHEN IT GET DISABLE BY CONSOLE, CARDS GET DISPLAY INLINE-BLOCK*/ 
+    card.classList.add("card");                 //asignamos una clase tipo carta 
     card.classList.add("mt-3");                 // margen top
     card.classList.add("ml-3");                 //margen izquierdo
     if (num == 13) {
