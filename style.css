@@ -43,7 +43,7 @@ body{
 
 .card {
     width: 100px;
-    display: flex;
+    display: inline-block;
     margin: 0 auto;
     margin-top: 10px;
     border-radius: 10px;
